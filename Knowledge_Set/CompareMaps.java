@@ -5,6 +5,11 @@ import java.util.Map;
  *
  * @author nithi
  */
+
+/* NOTE : Two Maps can be same even if their hashCodes are Different
+  ex :  ["abbbbbbbbbbb","aaaaaaaaaaab"] (Don't rely on hashcodes, use equals/custome written equals method)
+*/
+
 public class CompareMaps {
 
     public static void main(String[] args) {
@@ -52,9 +57,9 @@ public class CompareMaps {
 
         System.out.println("IS Map 1 equal to Map 2 ? " + h1.equals(h2));
         if (h1.hashCode() == h2.hashCode()) {
-            System.out.println("Their hashcodes are equal aswell ");
+            System.out.println("Their hashcodes are equal ");
         } else {
-            System.out.println("Their hashCodes are different aswell");
+            System.out.println("Their hashCodes are different");
         }
 
     }
